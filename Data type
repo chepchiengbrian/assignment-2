@@ -1,0 +1,260 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOqeDsYOL8S/qI4Pij3bRXL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chepchiengbrian/assignment-2/blob/main/Data%20type\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 1**\n",
+        "\n",
+        "---\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "o-jIXNQbePcw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "y = 0.25\n",
+        "print(y)\n",
+        "print(type(y))\n",
+        "\n",
+        "\n",
+        "z = int(y)\n",
+        "print(z)\n",
+        "print(type(z))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5hIsUy0Zefpc",
+        "outputId": "4d6a7336-c702-40f5-d500-05b1cbed8e82"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0.25\n",
+            "<class 'float'>\n",
+            "0\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 2**"
+      ],
+      "metadata": {
+        "id": "0UtNDn2Mf7mA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(45 * True)\n",
+        "print(-54.1 * True)\n",
+        "print(type(\"abcdef\" * False))\n",
+        "print(len(\"abcdef\" * False))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KZoybSTlgArY",
+        "outputId": "582df7b1-b6f5-4904-e526-1fe356fe1398"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "45\n",
+            "-54.1\n",
+            "<class 'str'>\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 3**\n",
+        "\n",
+        "---\n",
+        "1. create a function get_expected_cost`(beds, baths, has_basement)`.\n",
+        "2. create a variable value that calculates the value of the house\n",
+        "* The expected value of a house with 0 bedrooms, 0 bathrooms and has no basement is $80000.\n",
+        "* each bedroom adds 30000 to the expected cost,\n",
+        "* each bathroom adds 10000 to the expected cost, and\n",
+        "* a basement adds 40000 to the expected cost.\n",
+        "3. Create a variable estimated_cost that calls the function get_expected_cost with all the aguments.\n",
+        "4. Print the total cost.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "SMprrvDum7yl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_expected_cost(beds, baths, has_basement):\n",
+        "    value = 80000 + 30000 * beds + 10000 * baths + 40000 * has_basement\n",
+        "    return value\n",
+        "estimated_value = get_expected_cost(2, 1, True)\n",
+        "print(f\"The total cost of this house is ${estimated_value}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gk4cKFgFnKTY",
+        "outputId": "a83b6b1d-5d53-4b63-8a85-61665767fb0d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The total cost of this house is $190000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 4**\n",
+        "\n",
+        "---\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "bsYLZ8eLnZN9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(False + False)\n",
+        "print(True + False)\n",
+        "print(False + True)\n",
+        "print(True + True)\n",
+        "print(False + True + True + True)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nhkMdOjZnueB",
+        "outputId": "6609bc07-0f77-4643-da8e-e2a9601838a8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 5**\n",
+        "\n",
+        "---\n",
+        "1. Create a function cost_of_project(engraving, solid_gold) that takes the two arguments.\n",
+        "2. Create a variable cost that calculates the cost of the gold ring.\n",
+        "3. create other variables project_one and project_two that calls the function and calculates the total cost.\n",
+        "4. print the output of the two variables above\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "9Ou4x_s3pBxF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def cost_of_project(engraving, solid_gold):\n",
+        "    cost = solid_gold * (100 + 10 * len(engraving)) + (not solid_gold) * (50 + 7 * len(engraving))\n",
+        "    return cost\n",
+        "project_one = cost_of_project(\"Charlie+Denver\", True)\n",
+        "print(f\"The cost of the first project is ${project_one}.\")\n",
+        "project_two = cost_of_project(\"08/10/2000\", False)\n",
+        "print(f\"The cost of the second project is ${project_two}.\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s_WvT8NjpV8H",
+        "outputId": "4be496d3-bd8d-49a4-ab7d-0db9f90ba23c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The cost of the first project is $240.\n",
+            "The cost of the second project is $120.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "iC7-OGJId_-A"
+      }
+    }
+  ]
+}
