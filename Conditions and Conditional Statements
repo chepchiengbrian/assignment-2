@@ -1,0 +1,271 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMZXCZLuPxse9UU/wYxqCWQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/chepchiengbrian/assignment-2/blob/main/Conditions%20and%20Conditional%20Statements\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "_-rKBrbN_sbM"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 1**\n",
+        "---\n",
+        "# pseudo code\n",
+        "1. Get the student's score from user input and store it in a variable named `student_score`.\n",
+        "\n",
+        "2. Define a function called get_grade that takes a score as input:\n",
+        "* If the score is greater than 89, then set the\n",
+        "grade to \"A\".\n",
+        "*  Else if the score is greaterthan 79, then set the grade to \"B\".\n",
+        "* Else if the score is greater than 69, then set the grade to \"C\".\n",
+        "* Else if the score is greater than 59, then set the grade to \"D\".\n",
+        "* Else, set the grade to \"F\". f. Return the grade.\n",
+        "\n",
+        "3. Call the `get_grade` function with the student's score as input and store the returned grade in a variable named grade.\n",
+        "\n",
+        "4. Print the student's grade\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "kKKd6EsmEBDY"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "UG8cR5v1Outw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def get_grade(score):\n",
+        "  if score  >89:\n",
+        "    grade = \"A\"\n",
+        "  elif score >79:\n",
+        "    grade =\"B\"\n",
+        "  elif score >69:\n",
+        "    grade =\"C\"\n",
+        "  elif score >59:\n",
+        "    grade =\"D\"\n",
+        "  else:\n",
+        "    grade =\"F\"\n",
+        "  return grade\n",
+        "student_score = float(input(\"Enter the student score marks:\"))\n",
+        "grade=get_grade(student_score)\n",
+        "print(f\"Your grade this term is {grade}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5GHd13LFEQ_s",
+        "outputId": "e9518d60-d07a-491c-db46-fc3fcbf34dc9"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the student score marks:90\n",
+            "Your grade this term is A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 2**\n",
+        "# pseudo code\n",
+        "\n",
+        "---\n",
+        "1. Define a function called `cost_of_project` that takes two inputs: engraving  and `solid_gold` .\n",
+        "2. If `solid_gold` is True: a. Calculate the cost as 100 plus the length of engraving multiplied by 10.\n",
+        "3. Else: a. Calculate the cost as 50 plus the length of engraving multiplied by 7.\n",
+        "4. Return the calculated cost\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "4ERTBuneO0IF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def cost_of_project(engraving, solid_gold):\n",
+        "    if solid_gold == True:\n",
+        "        cost = 100 + (len(engraving) * 10)\n",
+        "    else:\n",
+        "        cost = 50 + (len(engraving) * 7)\n",
+        "    return cost\n",
+        "project_one = cost_of_project(\"Charlie+Denver\", True)\n",
+        "print(f\"The cost of the first project is ${project_one}.\")\n",
+        "project_two = cost_of_project(\"08/10/2000\", False)\n",
+        "print(f\"The cost of the second project is ${project_two}.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YXUrtlskPdZ2",
+        "outputId": "794d7db8-c1c9-4aed-8e58-bb4148aa2b2c"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The cost of the first project is $240.\n",
+            "The cost of the second project is $120.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 3**\n",
+        "\n",
+        "---\n",
+        "# pseudo code\n",
+        "1. Define a function called `get_water_bill` that takes one input: `num_gallons`\n",
+        "2. If num_gallons is less than or equal to 8000: a. Calculate the bill as `num_gallons `divided by 1000, then multiplied by 5.\n",
+        "2. Else if num_gallons is less than or equal to 22000: a. Calculate the bill as `num_gallons` divided by 1000, then multiplied by 6.\n",
+        "3. Else if `num_gallons` is less than or equal to 30000: a. Calculate the bill as `num_gallons` divided by 1000, then multiplied by 7.\n",
+        "4. Else: a. Calculate the bill as `num_gallons` divided by 1000, then multiplied by 10.\n",
+        "5. Return the calculated bill."
+      ],
+      "metadata": {
+        "id": "mI8xj2dBRXrU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_water_bill(num_gallons):\n",
+        "    if num_gallons <=8000:\n",
+        "        bill= num_gallons/1000*(5)\n",
+        "    elif num_gallons <=22000:\n",
+        "        bill= num_gallons/1000*(6)\n",
+        "    elif num_gallons <=30000:\n",
+        "        bill= num_gallons/1000*(7)\n",
+        "    else:\n",
+        "           bill= num_gallons/1000*(10)\n",
+        "    return bill\n",
+        "customer_gallons=int(input (\"Customer enter the number of gallons please:\"))\n",
+        "customer_bill= get_water_bill(customer_gallons)\n",
+        "customer_bill= round( customer_bill, 4)\n",
+        "print (f\"The bill of the customer ${customer_bill}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6uDTUpQqRrbc",
+        "outputId": "1bfe84c6-6658-4d3a-ddc9-b02d82060fca"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Customer enter the number of gallons please:20000\n",
+            "The bill of the customer $120.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Question 4**\n",
+        "\n",
+        "\n",
+        "---\n",
+        "# pseudo code\n",
+        "1. Define a function called get_phone_bill that takes one input: gb.\n",
+        "2. If gb is less than or equal to 15: a. Set the bill to 100.\n",
+        "3. Else: a. Calculate the bill as 100 plus the difference between gb and 15, multiplied by 100.\n",
+        "4. Return the calculated bill.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "1n8mkkHvfbWn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_phone_bill(gb):\n",
+        "    if gb <= 15:\n",
+        "        bill = 100\n",
+        "    else:\n",
+        "        bill = 100 + (gb - 15) * 100\n",
+        "    return bill\n",
+        "customer = float(input(\"Enter the number of gb used: \"))\n",
+        "customer_bill = get_phone_bill(customer)\n",
+        "customer_bill = round(customer_bill,2)\n",
+        "print(f\"The customer's bill is ${customer_bill}.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "spWNTRVThx8g",
+        "outputId": "33007e89-46b5-467e-bc03-dcee5b29801b"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number of gb used: 15.5\n",
+            "The customer's bill is $150.0.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
